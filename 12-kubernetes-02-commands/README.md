@@ -146,7 +146,7 @@ kubectl describe pod app-deployment-644d6775c5-cflld -n app-namespace
 Name:         app-deployment-644d6775c5-cflld
 Namespace:    app-namespace
 Priority:     0
-Node:         kuber/10.10.1.106
+Node:         kuber/192.168.1.106
 Start Time:   Thu, 17 Feb 2022 13:47:02 +0300
 Labels:       app=app-deployment
               pod-template-hash=644d6775c5
