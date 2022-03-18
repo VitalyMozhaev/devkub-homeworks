@@ -103,14 +103,21 @@ cat ~/.ssh/id_rsa.pub | ssh kubeuser@10.10.1.106 "mkdir -p ~/.ssh && cat >> ~/.s
 cat ~/.ssh/id_rsa.pub | ssh kubeuser@10.10.1.118 "mkdir -p ~/.ssh && cat >> ~/.ssh/authorized_keys"
 ```
 
-Для установки на Debian 10 исправил в файле \roles\kubernetes\preinstall\vars\ubuntu.yml
-```bash
+Прописываем пользователя для доступа к нодам в начале файла \kubespray\inventory\mycluster\group_vars\all\all.yml
+```text
+---
+ansible_user: kubeuser
+...
+```
+
+Для установки на Debian 10 исправил в файле \roles\kubernetes\preinstall\vars\debian.yml
+```text
 required_pkgs:
   - python3-apt
 ```
 
 Containerd должен быть прописан в файле \kubespray\inventory\mycluster\group_vars\k8s_cluster\k8s_cluster.yml
-```bash
+```text
 container_manager: containerd
 # Прописан по-умолчанию
 ```
