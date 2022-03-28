@@ -158,10 +158,10 @@ spec:
 Поднимаем поды:
 ```
 sudo kubectl apply -f ./templates/main/
-deployment.apps/multitool1 created
-service/multitool1 created
-deployment.apps/multitool2 created
-service/multitool2 created
+deployment.apps/frontend created
+service/frontend created
+deployment.apps/backend created
+service/backend created
 ```
 
 Проверяем поды:
