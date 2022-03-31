@@ -344,6 +344,7 @@ service/frontend created
 
 Проверяем deployment, поды, сервисы, statefulset:
 ```bash
+sudo kubectl get deploy,po,svc,statefulset
 NAME                       READY   UP-TO-DATE   AVAILABLE   AGE
 deployment.apps/backend    1/1     1            1           19s
 deployment.apps/frontend   1/1     1            1           2m53s
